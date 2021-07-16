@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:clipToPadding="false"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/productImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="86dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productTextView"
+        style="@style/Text.Title.ListItem"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productImageView"
+        tools:text="VINO GOLD Beinwell Gel\nTest" />
+
+    <TextView
+        android:id="@+id/oldPriceTextView"
+        style="@style/Text.OldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productTextView"
+        tools:text="22.95€" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        style="@style/Text.Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oldPriceTextView"
+        tools:text="19.75€" />
+
+    <ImageView
+        android:id="@+id/buyButton"
+        style="@style/Button.General"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        app:srcCompat="@drawable/ic_cart"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/wishlistButton"
+        style="@style/Button.General"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        app:srcCompat="@drawable/ic_wishlist"
+        app:tint="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:constraint_referenced_ids="buyButton, wishlistButton"
+        app:flow_horizontalGap="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

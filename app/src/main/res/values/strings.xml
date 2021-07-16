@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AsamBeauty</string>
+    <string name="shop_title">Shop</string>
+    <string name="cart_title">Cart</string>
+    <string name="wishlist_title">Wish List</string>
+    <string name="total_price_title">Total: %s€</string>
+    <string name="see_all_title">See all</string>
+
+    <string name="category_title_popular_products">Popular products</string>
+
+    <string name="quantity_one">1</string>
+    <string name="quantity_two">2</string>
+    <string name="quantity_three">3</string>
+</resources>

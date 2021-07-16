@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBar" />
+
+    <style name="AppBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/grey_500</item>
+    </style>
+
+    <style name="Text" />
+
+    <style name="Text.Title">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="Text.Title.Primary">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text.Title.Secondary">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.Title.ListItem">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.Title.Divider">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/playfair_display_font_family</item>
+        <item name="fontFamily">@font/playfair_display_font_family</item>
+        <item name="android:textStyle">italic</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text.Price">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.OldPrice">
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Button" />
+
+    <style name="Button.General">
+        <item name="android:elevation">4dp</item>
+        <item name="android:background">@drawable/bg_button_general_selectable</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

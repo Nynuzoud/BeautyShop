@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingStart="4dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/wishImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/wishTitleFlow"
+                app:srcCompat="@drawable/ic_wishlist" />
+
+            <TextView
+                android:id="@+id/wishTitleTextView"
+                style="@style/Text.Title.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/wishlist_title"
+                app:layout_constraintStart_toEndOf="@id/wishImageView"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/totalPriceTextView"
+                style="@style/Text.Title.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price_title"
+                app:layout_constraintEnd_toEndOf="@id/wishTitleFlow"
+                tools:ignore="MissingConstraints"
+                tools:text="Total: 324.35€" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/wishTitleFlow"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                app:constraint_referenced_ids="wishImageView, wishTitleTextView, totalPriceTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wishRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/seeAllButton"
+                app:layout_constraintTop_toBottomOf="@id/wishTitleFlow"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_wishlist_product" />
+
+            <TextView
+                android:id="@+id/seeAllButton"
+                style="@style/Button.General"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="8dp"
+                android:text="@string/see_all_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wishRecyclerView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>
